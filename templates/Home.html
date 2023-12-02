@@ -1,0 +1,42 @@
+<html>
+    <style>
+        .section
+        {
+            width: 600px;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            background-color:skyblue;
+            align-items: center;
+            text-align:center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin:auto;
+            margin-top:40px;
+            
+        }
+        
+    </style>
+    <body>
+        <div class="section">
+    
+            <div class='login'>
+            <h1>Nefty 50 Prediction</h1>
+            <form action="{{url_for('Predict_datapoint')}}" method="post">
+                <input type='text' name="Open" placeholder="Open" required="required" /><br>
+                <br/>
+                <input type='text' name="Year" placeholder="Year" required="required"/><br>
+                <br/>
+                <input type='text' name="Month" placeholder="Month" required="required"/><br>
+                <br/>
+                <input type='text' name="Day" placeholder="Day" required="required"/><br>
+                <br/>
+                <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+            </form>
+        <h2>
+            The Close Prediction is {{result}}
+        </h2>
+        </div>
+    </div> 
+    <body>
+</html>
